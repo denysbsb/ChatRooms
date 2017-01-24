@@ -1,6 +1,14 @@
 # ChatRooms
 Create rooms and chat with firebase and angular 2
 
+`$ npm install -g angular-cli`
+
+`$ npm install`
+
+`$ ng serve` - listen in localhost:42000
+
+`$ ng build` - The build datas in the dist/ directory
+
 ##Custom App
 - Create project in https://console.firebase.google.com
 - Select project > Database > Rules
