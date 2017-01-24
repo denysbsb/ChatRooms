@@ -24,7 +24,9 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectRoomComponent,
+    ChatComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
