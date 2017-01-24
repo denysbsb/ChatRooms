@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
+import { SelectRoomComponent } from './select-room/select-room.component';
+import { ChatComponent } from './chat/chat.component';
 
 const appRoutes: Routes = [
   { path: '', component: SelectRoomComponent, pathMatch: 'full' },
@@ -35,17 +37,5 @@ export const firebaseConfig = {
 })
 
 export class AppModule { }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
