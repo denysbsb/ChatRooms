@@ -1,10 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 
+const appRoutes: Routes = [
+  { path: '', component: SelectRoomComponent, pathMatch: 'full' },
+  { path: 'new', component: ChatComponent },
+  { path: 'chat/:roomId', component: ChatComponent}
+];
 
 export const firebaseConfig = {
     apiKey: "AIzaSyCuyqGUpxSVXFhMHWz_XakPcerz0BBdaNQ",
@@ -19,6 +25,7 @@ export const firebaseConfig = {
     AppComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
     BrowserModule,
     HttpModule
@@ -28,3 +35,17 @@ export const firebaseConfig = {
 })
 
 export class AppModule { }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
