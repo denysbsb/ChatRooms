@@ -1,0 +1,19 @@
+<div class="room-container">
+<!--
+  <md-card *ngFor="let room of rooms | async">
+
+        
+      </md-card-actions>
+ 
+  <!--
+  <div *ngIf="(rooms | async)?.length < 1">
+  -->
+  <li class="text" *ngFor="let room of rooms | async">
+    {{room.$key}}
+     <a [routerLink]="['/chat',room.$key]" md-raised-button color="primary">JOIN</a>
+  </li>
+ 
+  <div *ngIf="!rooms">
+    <h2>No rooms available</h2>
+  </div>
+</div>
